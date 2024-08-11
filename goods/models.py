@@ -31,9 +31,17 @@ class Products(models.Model):
         db_table: 'product'
         verbose_name= 'Продукт'
         verbose_name_plural = 'Продукты'
+        ordering = ('id',)
+        
     
     def __str__(self):
         return f'{self.name} Количество - {self.quantity}'
     
     def display_id(self):
         return f'{self.id:05}'
+    
+    def sell_price(self):
+        if self.discount:
+            return round(self.price, 2)
+        
+        return self.price

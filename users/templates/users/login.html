@@ -1,9 +1,13 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block modal_cart %}
+{% comment %} {% block modal_cart %}
 {% include "includes/cart_button.html" %}
-{% endblock  %}
+{% endblock  %} {% endcomment %}
+
+{% block modal_cart %}
+{% include "cart_batton.html" %}
+{% endblock modal_cart %}
 
 {% block content %}
 <div class="row">
