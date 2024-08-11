@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 from django.http import HttpResponseNotFound
 
-from django.conf.global_settings import AUTH_USER_MODEL, MEDIA_ROOT, MEDIA_URL, STATICFILES_DIRS
+from django.conf.global_settings import AUTH_USER_MODEL, LOGIN_URL, MEDIA_ROOT, MEDIA_URL, STATICFILES_DIRS
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'main',
     'goods',
     'users',
+    'carts',
 ]
 
 MIDDLEWARE = [
@@ -136,3 +137,4 @@ MEDIA_ROOT = BASE_DIR/ 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'users.User'
+LOGIN_URL = '/user/login'
