@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 {% load static %}
 {% load goods_tags %}
-{% comment %} {% load carts_tags %} {% endcomment %}
+{% load carts_tags %}
 
-{% comment %} {% user_carts request as carts %} {% endcomment %}
+{% user_carts request as carts %}
 <html lang="en">
 
 <head>
@@ -135,8 +135,8 @@
                                     <!-- Закончилась разметка корзины -->
                                 </div>
                                 <a class="btn btn-dark" href="orders/create_order.html">
-                                    Оформить заказ
-                                </a>
+                                    aaaaОформить заказ 
+                                </a> 
                             </div>
                         </div>
                     </div>
@@ -159,7 +159,7 @@
     </section>
     {% block footer %}   {% endblock footer %}
     <script src="{% static 'deps/js/jquery/jquery-3.7.0.min.js' %}"></script>
-    <script src= "{% static 'deps/js/jquery-events.js' %}"></script>
+    {% comment %} <script src= "{% static 'deps/js/jquery-events.js' %}"></script> {% endcomment %}
     <script src="{% static 'deps/js/jquery-ajax.js' %}" ></script>
     <script src="{% static 'deps/js/bootstrap/bootstrap.bundle.min.js' %}" ></script>
 </body>

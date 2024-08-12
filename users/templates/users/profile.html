@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load carts_tags %}
 
 {% block content %}
 <div class="row">
@@ -87,8 +88,8 @@
                         {% include "carts/includes/included_cart.html" %}
                         <!-- Закончилась разметка корзины -->
                     </div>
-                    <a class="btn btn-dark" href="../orders/create_order.html">
-                        Оформить заказ
+                    <a class="btn btn-dark" href="{% url "orders:create_order" %}">
+                        Оформить заказjj
                     </a>
                 </div>
             </div>
